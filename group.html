@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<style>
+		#form {
+    border-radius: 4px;
+	opacity: 0.8;
+    background-color: #f2f2f2;
+    padding: 10px;
+	width:40%;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+		</style>
+		<script>
+			function price()
+			{
+				var x=document.getElementById("cus").checked;
+				var y=document.getElementById("temp").checked;
+				var z=0;
+				if(x== true)
+				{z=3000;}
+				if(y== true)
+				{z=1500;}
+				if(x==true && y==true)
+				{z=4500;}
+				document.getElementById("service").value=z;
+			}
+		</script>
+	</head>
+	<body>
+		<div class="centered" id="form" >
+		<form method="post" name="cupid" width="50" >
+			<fieldset>
+			
+				<label>Contac Name:</label>  <input type="text" id="fname" placeholder="Contact Name" required><br>
+				<br><label>Company Name:</label>  <input type="text" id="lname" placeholder="Company Name" required><br>
+				<br><label>Email:</label>  <input type="text" placeholder="Email"><br>
+				<br><label>Phone Number:</label>  <input type="text" placeholder="Phone Number">
+				<br><label>Services:</label><br>
+				Custom Website<input type="checkbox" value="1" id="cus">
+				Template Based Website<input type="checkbox" value="1" id="temp"><br>
+				<br><input type="button" value="Calculate Price" onclick="price()"><br>
+				<br><label>Service cost estimate:</label> <input type="number"  id="service" ><br>
+				<br><input type="submit" value="submit">
+			
+			</fieldset>			
+			</form>
+			<div><br>
+		
+	</body>
+</html>
+
